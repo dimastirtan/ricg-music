@@ -1,6 +1,4 @@
-.App {
-  text-align: center;
-}
+
 
 .marquee {
   width: 24em;
@@ -28,4 +26,8 @@
 
 .carousel-item img {
   max-width: 100%;
+}
+
+.card {
+  border-radius :0 !important;
 }
