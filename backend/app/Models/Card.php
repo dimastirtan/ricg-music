@@ -10,7 +10,12 @@ class Card extends Model
     use HasFactory;
     
     protected $fillable =[
+        'article',
         'title',
-        'text',
+        'subtitle',
+        'deskripsi',
+        'gambar',
+        'created_at',
+        'updated_at',
     ];
 }

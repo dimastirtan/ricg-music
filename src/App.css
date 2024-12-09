@@ -1,18 +1,100 @@
+/* GLOBAL STYLES */
+body {
+  overflow-x: hidden;
+  margin: 0;
+  font-family: Arial, sans-serif;
+  color: #fff; /* Teks default putih */
+}
+
+img {
+  height: auto;
+}
+
+/* RESPONSIVE CONTAINER */
+.responsive-container {
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+@media (min-width: 576px) {
+  .responsive-container {
+    padding: 0 30px;
+  }
+}
+
+@media (min-width: 768px) {
+  .responsive-container {
+    padding: 0 50px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .responsive-container {
+    max-width: 1140px;
+  }
+}
+
+@media (max-width: 414px) { /* Untuk iPhone XR */
+  .responsive-container {
+    margin: 0; /* Hilangkan margin di kiri dan kanan */
+    padding: 0; /* Hilangkan padding di kiri dan kanan */
+    max-width: 100%; /* Pastikan kontainer mengambil lebar penuh */
+  }
+}
+
+  .card {
+    width: 100%; /* Pastikan card memenuhi lebar container */
+    margin-bottom: 15px; /* Tambahkan spasi antar kartu */
+  }
 
 
+
+/* NAVBAR */
+.navbar img {
+  filter: invert(100%); /* Putihkan logo */
+}
+
+.navbar-toggler {
+  display: inline-block;
+  padding-left: 100%;
+}
+
+@media (max-width: 576px) {
+  .navbar img {
+    width: 120px; /* Sesuaikan ukuran logo untuk layar kecil */
+  }
+}
+
+/* SUBNAV */
+.subnav {
+  background-color: black;
+  color: white;
+  padding: 10px 20px;
+  display: none; /* Default tidak terlihat */
+  text-align: center;
+  border-bottom: 1px solid #444;
+}
+
+.subnav.visible {
+  display: block;
+}
+
+/* MARQUEE */
 .marquee {
-  width: 24em;
   overflow: hidden;
   white-space: nowrap;
-  box-sizing: border-box;
-  color: #fff;
+  position: relative;
+  width: 100%;
+  color: white;
+  padding: 10px 0;
 }
 
 .marquee-text {
   display: inline-block;
-  font-size: 30px;
-  padding-left: 50%;
-  animation: marquee 8s linear infinite;
+  padding-left: 50%; /* Memulai dari sisi kanan */
+  animation: marquee 15s linear infinite;
+  font-size: 1.2rem;
+  text-transform: uppercase; /* Huruf kapital untuk lebih menonjol */
 }
 
 @keyframes marquee {
@@ -24,15 +106,78 @@
   }
 }
 
-.carousel-item img {
-  max-width: 100%;
+@media (max-width: 768px) {
+  .marquee-text {
+    font-size: 1rem;
+    animation: marquee 12s linear infinite;
+  }
 }
 
+@media (max-width: 480px) {
+  .marquee-text {
+    font-size: 0.8rem;
+    animation: marquee 15s linear infinite;
+  }
+}
+
+/* CAROUSEL */
+.carousel-item img {
+  max-width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+/* CARD */
 .card {
-  border-radius :0 !important;
+  border-radius: 0 !important;
+  background-color: #1c1c1c; /* Warna abu-abu gelap */
+  color: #fff;
+  border: 1px solid #444;
 }
 
 .card-header {
-  border-radius :0 !important;
+  background-color: #d32f2f;
+  color: #fff;
+  font-weight: bold;
+  text-align: left; /* Atur teks menjadi rata kiri */
+  border-radius: 0 !important;
 }
 
+@media (max-width: 768px) {
+  .card {
+    margin-bottom: 15px; /* Tambahkan spasi antar kartu */
+  }
+}
+
+/* FOOTER */
+footer {
+  background-color: #121212;
+  color: #fff;
+  padding: 20px;
+  text-align: left; /* Pastikan teks footer rata kiri */
+}
+
+footer a {
+  color: #d32f2f; /* Warna merah */
+  text-decoration: none;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
+
+/* ROW ADJUSTMENTS */
+.row {
+  margin: 0; /* Hilangkan margin negatif */
+  padding: 0;
+}
+
+/* APP BACKGROUND */
+.App {
+  background-image: url('assets/test.jpg');
+  background-position: center;
+  background-repeat: repeat-x;
+  background-size: 33.3%;
+  background-attachment: fixed;
+  color: white;
+}

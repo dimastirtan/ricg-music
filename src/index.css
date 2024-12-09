@@ -11,3 +11,38 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+/* Atur ukuran default untuk perangkat kecil */
+body {
+  font-size: 14px;
+  background-image:url('assets/test.jpg');
+  background-position: center;
+  background-repeat: repeat-x;
+  background-size: 100%;
+  background-attachment: fixed;
+}
+
+/* Untuk layar dengan ukuran iPhone XR */
+@media (max-width: 414px) {
+  .navbar {
+    flex-direction: column; /* Susun item navbar secara vertikal */
+    text-align: center;
+  }
+
+  .marquee-text {
+    font-size: 16px; /* Sesuaikan ukuran teks */
+  }
+
+  .card {
+    padding: 10px; /* Kurangi padding */
+  }
+
+  .carousel img, .small-carousel img {
+    max-width: 100%; /* Pastikan gambar tidak melampaui layar */
+    height: auto;
+  }
+
+  .footer {
+    text-align: center; /* Center footer content */
+  }
+}
