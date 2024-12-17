@@ -1,7 +1,7 @@
 import React from 'react';
-import Logo from './Rich-Music-B.png';
+import Logo from '../Logo/Logo';
 
-function Navbar() {
+const Navbar = () => {
     return (
       <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
         <div className="container-fluid">
@@ -19,4 +19,4 @@ function Navbar() {
   }
   
 
-  export default React.memo(Navbar);
+  export default Navbar;

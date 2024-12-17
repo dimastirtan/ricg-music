@@ -70,4 +70,4 @@ function Footer() {
     );
   }
 
-  export default React.memo(Footer);
+  export default Footer;

@@ -1,12 +1,9 @@
-import React,{useState} from 'react';
-
+import React from 'react';
 
 function SubNav() {
-    const [isVisible, setIsVisible] = useState(true);
-  
     return (
       <nav
-        className={`navbar navbar-expand-lg bg-black subnav px-5 ${isVisible ? "visible" : "invisible"}`}
+        className="navbar navbar-expand-lg bg-black subnav px-5 visible" // Set to "visible" directly
         style={{
           transition: "transform 1s ease-in-out",
         }}
@@ -30,22 +27,22 @@ function SubNav() {
                   Home
                 </a>
               </li>
-              <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle text-white"  href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-              Articles
-            </a>
-            <ul class="dropdown-menu">
-                    <li><a class="dropdown-item" href="#">News</a></li>
-                    <li><a class="dropdown-item" href="#">Review/Bands</a></li>
+              <li className="nav-item dropdown">
+                <a className="nav-link dropdown-toggle text-white" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Articles
+                </a>
+                <ul className="dropdown-menu">
+                  <li><a className="dropdown-item" href="#">News</a></li>
+                  <li><a className="dropdown-item" href="#">Review/Bands</a></li>
                 </ul>
               </li>
-              <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle text-white" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-              Features
-            </a>
-            <ul class="dropdown-menu">
-                    <li><a class="dropdown-item" href="#">Opinion</a></li>
-                    <li><a class="dropdown-item" href="#">List</a></li>
+              <li className="nav-item dropdown">
+                <a className="nav-link dropdown-toggle text-white" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Features
+                </a>
+                <ul className="dropdown-menu">
+                  <li><a className="dropdown-item" href="#">Opinion</a></li>
+                  <li><a className="dropdown-item" href="#">List</a></li>
                 </ul>
               </li>
               <li className="nav-item">
@@ -63,12 +60,12 @@ function SubNav() {
                   Hari Musik Keras
                 </a>
               </li>
-              <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle text-white"  href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-              Buy Ticket
-            </a>
-            <ul class="dropdown-menu">
-                    <li><a class="dropdown-item" href="#">NORTHMAGZ FEST 2024 POWERED BY DISTORSIKERAS</a></li>
+              <li className="nav-item dropdown">
+                <a className="nav-link dropdown-toggle text-white" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Buy Ticket
+                </a>
+                <ul className="dropdown-menu">
+                  <li><a className="dropdown-item" href="#">NORTHMAGZ FEST 2024 POWERED BY DISTORSIKERAS</a></li>
                 </ul>
               </li>
               <li className="nav-item">
@@ -81,23 +78,23 @@ function SubNav() {
                   Podcast
                 </a>
               </li>
-              <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle text-white"  href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-              Submission
-            </a>
-            <ul class="dropdown-menu">
-                    <li><a class="dropdown-item" href="#">Hari Musik Keras</a></li>
-                    <li><a class="dropdown-item" href="#">Pree Relase</a></li>
-                    <li><a class="dropdown-item" href="#">Media Partner</a></li>
+              <li className="nav-item dropdown">
+                <a className="nav-link dropdown-toggle text-white" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Submission
+                </a>
+                <ul className="dropdown-menu">
+                  <li><a className="dropdown-item" href="#">Hari Musik Keras</a></li>
+                  <li><a className="dropdown-item" href="#">Pree Relase</a></li>
+                  <li><a className="dropdown-item" href="#">Media Partner</a></li>
                 </ul>
               </li>
-              <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle text-white"  href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-              About
-            </a>
-            <ul class="dropdown-menu">
-                    <li><a class="dropdown-item" href="#">About</a></li>
-                    <li><a class="dropdown-item" href="#">Privacy Policy</a></li>
+              <li className="nav-item dropdown">
+                <a className="nav-link dropdown-toggle text-white" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  About
+                </a>
+                <ul className="dropdown-menu">
+                  <li><a className="dropdown-item" href="#">About</a></li>
+                  <li><a className="dropdown-item" href="#">Privacy Policy</a></li>
                 </ul>
               </li>
             </ul>
@@ -116,6 +113,6 @@ function SubNav() {
         </div>
       </nav>
     );
-  }
+}
 
-  export default React.memo();
+export default SubNav;

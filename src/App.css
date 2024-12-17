@@ -3,11 +3,21 @@ body {
   overflow-x: hidden;
   margin: 0;
   font-family: Arial, sans-serif;
-  color: #fff; /* Teks default putih */
+  color: #fff; /* Default text color is white */
 }
 
 img {
   height: auto;
+}
+
+/* APP BACKGROUND */
+.App {
+  background-image: url('assets/test.jpg');
+  background-position: center;
+  background-repeat: repeat-x;
+  background-size: 33.3%;
+  background-attachment: fixed;
+  color: white;
 }
 
 /* RESPONSIVE CONTAINER */
@@ -34,49 +44,37 @@ img {
   }
 }
 
-@media (max-width: 414px) { /* Untuk iPhone XR */
+@media (max-width: 414px) { /* For iPhone XR */
   .responsive-container {
-    margin: 0; /* Hilangkan margin di kiri dan kanan */
-    padding: 0; /* Hilangkan padding di kiri dan kanan */
-    max-width: 100%; /* Pastikan kontainer mengambil lebar penuh */
+    margin: 0; /* Remove left and right margin */
+    padding: 0; /* Remove left and right padding */
+    max-width: 100%; /* Ensure the container takes up full width */
   }
 }
 
-  .card {
-    width: 100%; /* Pastikan card memenuhi lebar container */
-    margin-bottom: 15px; /* Tambahkan spasi antar kartu */
-  }
-
-
-
-/* NAVBAR */
-.navbar img {
-  filter: invert(100%); /* Putihkan logo */
+/* CARD */
+.card {
+  width: 100%;
+  margin-bottom: 15px;
+  border-radius: 0 !important;
+  background-color: #1c1c1c; /* Dark grey background */
+  color: #fff;
+  border: 0px solid #444;
 }
 
-.navbar-toggler {
-  display: inline-block;
-  padding-left: 100%;
+.card-header {
+  background-color: #d32f2f;
+  color: #fff;
+  font-weight: bold;
+  text-align: left; /* Align text to the left */
+  border-radius: 0 !important;
 }
 
-@media (max-width: 576px) {
-  .navbar img {
-    width: 120px; /* Sesuaikan ukuran logo untuk layar kecil */
-  }
-}
-
-/* SUBNAV */
-.subnav {
-  background-color: black;
-  color: white;
-  padding: 10px 20px;
-  display: none; /* Default tidak terlihat */
-  text-align: center;
-  border-bottom: 1px solid #444;
-}
-
-.subnav.visible {
-  display: block;
+/* CAROUSEL */
+.carousel-item img {
+  max-width: 100%;
+  height: auto;
+  object-fit: cover;
 }
 
 /* MARQUEE */
@@ -91,10 +89,10 @@ img {
 
 .marquee-text {
   display: inline-block;
-  padding-left: 50%; /* Memulai dari sisi kanan */
+  padding-left: 50%; /* Start from the right side */
   animation: marquee 15s linear infinite;
   font-size: 1.2rem;
-  text-transform: uppercase; /* Huruf kapital untuk lebih menonjol */
+  text-transform: uppercase; /* Capitalize text */
 }
 
 @keyframes marquee {
@@ -120,33 +118,34 @@ img {
   }
 }
 
-/* CAROUSEL */
-.carousel-item img {
-  max-width: 100%;
-  height: auto;
-  object-fit: cover;
+/* NAVBAR */
+.navbar img {
+  filter: invert(100%); /* Invert logo color */
 }
 
-/* CARD */
-.card {
-  border-radius: 0 !important;
-  background-color: #1c1c1c; /* Warna abu-abu gelap */
-  color: #fff;
-  border: 1px solid #444;
+.navbar-toggler {
+  display: inline-block;
+  padding-left: 100%;
 }
 
-.card-header {
-  background-color: #d32f2f;
-  color: #fff;
-  font-weight: bold;
-  text-align: left; /* Atur teks menjadi rata kiri */
-  border-radius: 0 !important;
-}
-
-@media (max-width: 768px) {
-  .card {
-    margin-bottom: 15px; /* Tambahkan spasi antar kartu */
+@media (max-width: 576px) {
+  .navbar img {
+    width: 120px; /* Adjust logo size for small screens */
   }
+}
+
+/* SUBNAV */
+.subnav {
+  background-color: black;
+  color: white;
+  padding: 10px 20px;
+  display: none; /* Initially hidden */
+  text-align: center;
+  border-bottom: 1px solid #444;
+}
+
+.subnav.visible {
+  display: block; /* Show when visible class is added */
 }
 
 /* FOOTER */
@@ -154,11 +153,11 @@ footer {
   background-color: #121212;
   color: #fff;
   padding: 20px;
-  text-align: left; /* Pastikan teks footer rata kiri */
+  text-align: left; /* Align text to the left */
 }
 
 footer a {
-  color: #d32f2f; /* Warna merah */
+  color: #d32f2f; /* Red color for links */
   text-decoration: none;
 }
 
@@ -168,16 +167,17 @@ footer a:hover {
 
 /* ROW ADJUSTMENTS */
 .row {
-  margin: 0; /* Hilangkan margin negatif */
+  margin: 0; /* Remove negative margin */
   padding: 0;
 }
 
-/* APP BACKGROUND */
-.App {
-  background-image: url('assets/test.jpg');
-  background-position: center;
-  background-repeat: repeat-x;
-  background-size: 33.3%;
-  background-attachment: fixed;
-  color: white;
+/* CUSTOM CARD MARGIN */
+.custom-card {
+  margin: 0 0 16em 0;
+}
+
+@media (max-width: 768px) {
+  .custom-card {
+    margin: 0 0 2em 0 !important; /* Reduce margin on small screens */
+  }
 }

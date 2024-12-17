@@ -33,10 +33,6 @@ body {
     font-size: 16px; /* Sesuaikan ukuran teks */
   }
 
-  .card {
-    padding: 10px; /* Kurangi padding */
-  }
-
   .carousel img, .small-carousel img {
     max-width: 100%; /* Pastikan gambar tidak melampaui layar */
     height: auto;
